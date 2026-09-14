@@ -1,6 +1,6 @@
 # Learning Loop
 
-> **Deep Anchor** - Research / Mastery / Systems
+> Every expensive answer makes future answers cheaper.
 
 ## Concept
 

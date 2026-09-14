@@ -1,12 +1,10 @@
 # Deep Anchor
 
-> **Research / Mastery / Systems**
+> Research / Mastery / Systems
 
-## Philosophy
+## Purpose
 
-Deep Anchor is the research layer.
-
-The objective is not to learn everything. The objective is to become exceptionally good at a small number of difficult systems problems.
+Deep Anchor is the research layer. The objective is to become exceptionally good at a small number of difficult systems problems.
 
 ## Primary Domains
 
@@ -18,21 +16,6 @@ The objective is not to learn everything. The objective is to become exceptional
 - GraphQL
 - Inference optimization
 - Knowledge retrieval
-
-## Research Focus
-
-```text
-┌─────────────────────────────────────┐
-│           DEEP ANCHOR               │
-│                                     │
-│ Research                            │
-│ Inference                           │
-│ Retrieval                           │
-│ Agentic Systems                     │
-│ Vector DB                           │
-│ MLOps / DevOps                      │
-└─────────────────────────────────────┘
-```
 
 ## Research Areas
 
@@ -64,18 +47,26 @@ Conclusion
 New Question
 ```
 
+## Month 1-3 Targets
+
+| Month | Target | Benchmark |
+|-------|--------|-----------|
+| 1 | Semantic cache working | Cache latency < 100ms |
+| 2 | SLM router working | SLM handles > 30% requests |
+| 3 | Full pipeline end-to-end | Cost reduction > 60% |
+
 ## Success Criteria
 
 Deep Anchor is successful when:
 
-- [ ] Core hypotheses are tested
-- [ ] Benchmarks are established
-- [ ] Architecture decisions are documented
-- [ ] Failure modes are understood
+- [ ] Core hypotheses tested
+- [ ] Benchmarks established
+- [ ] Architecture decisions documented
+- [ ] Failure modes understood
 - [ ] Knowledge is reusable
 
 ---
 
 **Next:** [Regional Competition →](/plan/regional-competition)
 
-**Related:** [Area Overview →](/area/) | [Experiments →](/start-over/)
+**Related:** [Technology Reference →](/area/) | [Experiments →](/start-over/)

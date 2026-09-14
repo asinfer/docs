@@ -1,33 +1,24 @@
 # Regional Competition
 
-> **Proof / Hackathons / FOSS**
+> Proof / Hackathons / FOSS
 
 ## Purpose
 
-Deep Anchor creates knowledge. Regional Competition creates proof.
+Deep Anchor creates knowledge. Regional Competition creates proof. This is where the project leaves the notebook and enters the real world.
 
-This layer is where the project leaves the notebook and enters the real world.
+## Public Proof Targets
 
-## Public Proof of Talent
-
-Targets:
-
-- Hackathons
-- FOSS contributions
-- GitHub projects
-- Micro-tools
-- Benchmarks
-- Engineering experiments
-- Technical blog posts
-- Open-source optimizations
-- Public datasets
-- Reproducible experiments
+| Target | Month | Status |
+|--------|-------|--------|
+| Micro-tools released | 4 | ⬜ |
+| GitHub repositories public | 4 | ⬜ |
+| Hackathon participation | 4 | ⬜ |
+| FOSS contributions | 4 | ⬜ |
+| Technical articles | 4 | ⬜ |
 
 ## Micro Tools
 
-Each tool should solve one narrow problem exceptionally well.
-
-Examples:
+Each tool solves one narrow problem exceptionally well:
 
 ```text
 semantic-cache
@@ -55,28 +46,6 @@ Benchmark
 Result
    ↓
 Open Source
-```
-
-## Competition Strategy
-
-The objective is not to participate everywhere. The objective is to build a visible trail of execution.
-
-```text
-Experiment
-    ↓
-Open Source
-    ↓
-Benchmark
-    ↓
-Hackathon
-    ↓
-FOSS
-    ↓
-Recognition
-    ↓
-Credibility
-    ↓
-Production
 ```
 
 ## Internal Rule

@@ -1,6 +1,6 @@
 # State Machine
 
-> **Deep Anchor** - Research / Mastery / Systems
+> Track execution through explicit states.
 
 ## Concept
 

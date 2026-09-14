@@ -1,10 +1,8 @@
 # Plan
 
-> **Deep Anchor** → **Regional Competition** → **Olympus**
+> Path to follow. Weekly and monthly targets. Complete each benchmark perfectly.
 
-## Three Strategic Layers
-
-The project progresses through three distinct layers.
+## Strategic Layers
 
 ```text
                          OLYMPUS
@@ -19,37 +17,13 @@ The project progresses through three distinct layers.
              Research / Mastery / Systems
 ```
 
-## Layer Definitions
-
 | Layer | Focus | Output |
 |-------|-------|--------|
 | [Deep Anchor](/plan/deep-anchor) | Research / Mastery / Systems | Expertise |
 | [Regional Competition](/plan/regional-competition) | Proof / Hackathons / FOSS | Credibility |
 | [Olympus](/plan/olympus) | Production / Market / Reality | Product |
 
-## The Transformation
-
-```text
-Deep Anchor
-Turn:
-Unknown
-into:
-Expertise
-
-Regional Competition
-Turn:
-Expertise
-into:
-Proof
-
-Olympus
-Turn:
-Proof
-into:
-Product
-```
-
-## Progression
+## The Path
 
 ```text
 Research
@@ -73,6 +47,6 @@ Product
 
 ---
 
-**Next:** [Deep Anchor →](/plan/deep-anchor)
+**Next:** [Roadmap →](/plan/roadmap)
 
-**Related:** [Scope →](/scope/) | [Area →](/area/)
+**Related:** [Scope →](/scope/) | [Technology Reference →](/area/)

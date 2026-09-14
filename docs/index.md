@@ -7,28 +7,31 @@ hero:
   tagline: A latency-aware, retrieval-first API architecture for semantic caching, SLM routing, and intelligent model escalation
   actions:
     - theme: brand
-      text: Explore the Architecture
-      link: /idea/architecture
+      text: What We're Building
+      link: /idea/
     - theme: alt
-      text: View Experiments
-      link: /start-over/
+      text: The Plan
+      link: /plan/
     - theme: alt
       text: GitHub
       link: https://github.com/your-username/headless-hyper-efficient-api
 
 features:
-  - icon: 🏛️
-    title: Deep Anchor
-    details: Research the smallest details of inference, retrieval, orchestration and infrastructure
-  - icon: 🏆
-    title: Regional Competition
-    details: Turn research into public proof through open source, benchmarks, FOSS and competitions
-  - icon: ⚡
-    title: Olympus
-    details: Ship the system into production and let developers and enterprises judge it
+  - icon: 💡
+    title: Idea
+    details: What we build, what we provide, the product statement
+  - icon: 🔧
+    title: Scope
+    details: Tech domains and their integration points
+  - icon: 📋
+    title: Plan
+    details: Weekly and monthly targets, benchmark completion path
+  - icon: 📚
+    title: Area
+    details: Technology reference for each domain
 ---
 
-## Architecture Overview
+## How It Works
 
 ```text
                     QUERY
@@ -58,19 +61,6 @@ features:
                                  KNOWLEDGE
 ```
 
-## How It Works
-
-| Step | Action | Cost |
-|------|--------|------|
-| 1 | User Query | Free |
-| 2 | Fast Embedding | Low |
-| 3 | Vector Search | Low |
-| 4 | Cache Hit? | Free |
-| 5 | SLM Routing | Low |
-| 6 | Complexity Eval | Low |
-| 7 | Frontier Model | High |
-| 8 | Knowledge Write-back | Low |
-
 ## Core Principle
 
 > **Spend intelligence only where intelligence is necessary.**
@@ -83,10 +73,10 @@ The goal is not to build the biggest AI system. The goal is to build a system th
 
 ### Start Here
 
-1. [What are we building?](/scope/) - Understand the problem and goals
-2. [What area are we attacking?](/area/) - Technical domains and research areas
-3. [What is the idea?](/idea/) - Architecture and core mechanisms
-4. [What is the plan?](/plan/) - Strategic layers and roadmap
+1. [What are we building?](/idea/) - Product statement and core mechanisms
+2. [What's the scope?](/scope/) - Tech domains and integration points
+3. [What's the plan?](/plan/) - Weekly targets and benchmark path
+4. [Technology reference](/area/) - Deep dive into each domain
 5. [When do we start over?](/start-over/) - Failure analysis and iteration
 
 </div>

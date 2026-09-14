@@ -1,52 +1,74 @@
 # Milestones
 
-> **Deep Anchor** → **Regional Competition** → **Olympus**
+> Track completion. Each milestone = benchmark complete.
 
-## Milestone Tracker
+## Month 1
 
-| Phase | Milestone | Status |
-|-------|-----------|--------|
-| 0 | Repository created | ⬜ |
-| 0 | Documentation site | ⬜ |
-| 0 | API skeleton | ⬜ |
-| 0 | SystemState defined | ⬜ |
-| 0 | Basic embedding service | ⬜ |
-| 0 | Vector DB integration | ⬜ |
-| 0 | Basic retrieval | ⬜ |
-| 1 | Query embeddings stored | ⬜ |
-| 1 | Responses stored | ⬜ |
-| 1 | Similarity search working | ⬜ |
-| 1 | Cache threshold tuned | ⬜ |
-| 1 | Cache metrics | ⬜ |
-| 1 | Latency benchmark | ⬜ |
-| 2 | SLM integrated | ⬜ |
-| 2 | Complexity evaluator | ⬜ |
-| 2 | Routing policy | ⬜ |
-| 2 | SLM response path | ⬜ |
-| 2 | Confidence scoring | ⬜ |
-| 3 | Frontier model integrated | ⬜ |
-| 3 | Escalation policy | ⬜ |
-| 3 | Response compression | ⬜ |
-| 3 | Embedding generation | ⬜ |
-| 3 | Knowledge write-back | ⬜ |
-| 4 | Accuracy benchmark | ⬜ |
-| 4 | Latency benchmark | ⬜ |
-| 4 | Cost benchmark | ⬜ |
-| 4 | Cache threshold benchmark | ⬜ |
-| 4 | SLM vs frontier benchmark | ⬜ |
-| 5 | Benchmark published | ⬜ |
-| 5 | Micro tools released | ⬜ |
-| 5 | Hackathon participation | ⬜ |
-| 5 | FOSS contributions | ⬜ |
-| 5 | Technical articles | ⬜ |
-| 6 | Authentication | ⬜ |
-| 6 | Rate limiting | ⬜ |
-| 6 | Observability | ⬜ |
-| 6 | Billing | ⬜ |
-| 6 | API versioning | ⬜ |
-| 6 | SLA definitions | ⬜ |
-| 6 | Security review | ⬜ |
-| 6 | Production deployment | ⬜ |
+| Milestone | Status |
+|-----------|--------|
+| Repository created | ⬜ |
+| Documentation site | ⬜ |
+| API skeleton | ⬜ |
+| SystemState defined | ⬜ |
+| Basic embedding service | ⬜ |
+| Vector DB integration | ⬜ |
+| Basic retrieval | ⬜ |
+| Query embeddings stored | ⬜ |
+| Responses stored | ⬜ |
+| Similarity search working | ⬜ |
+| Cache threshold tuned | ⬜ |
+| Cache metrics | ⬜ |
+| **Latency benchmark (cache)** | ⬜ |
+
+## Month 2
+
+| Milestone | Status |
+|-----------|--------|
+| SLM integrated | ⬜ |
+| Complexity evaluator | ⬜ |
+| Routing policy | ⬜ |
+| SLM response path | ⬜ |
+| Confidence scoring | ⬜ |
+| **SLM accuracy benchmark** | ⬜ |
+| **SLM latency benchmark** | ⬜ |
+| Cache → SLM path end-to-end | ⬜ |
+
+## Month 3
+
+| Milestone | Status |
+|-----------|--------|
+| Frontier model integrated | ⬜ |
+| Escalation policy | ⬜ |
+| Response compression | ⬜ |
+| Embedding generation | ⬜ |
+| Knowledge write-back | ⬜ |
+| **End-to-end latency benchmark** | ⬜ |
+| **Cost benchmark** | ⬜ |
+| **Quality benchmark** | ⬜ |
+| **Cache hit rate measurement** | ⬜ |
+| All benchmarks published | ⬜ |
+
+## Month 4
+
+| Milestone | Status |
+|-----------|--------|
+| Micro tools released | ⬜ |
+| GitHub repositories public | ⬜ |
+| Hackathon participation | ⬜ |
+| FOSS contributions | ⬜ |
+| Technical articles | ⬜ |
+
+## Month 5-6
+
+| Milestone | Status |
+|-----------|--------|
+| Authentication | ⬜ |
+| Rate limiting | ⬜ |
+| Observability | ⬜ |
+| API versioning | ⬜ |
+| Security review | ⬜ |
+| SLA definitions | ⬜ |
+| Production deployment | ⬜ |
 
 ## Success Metrics
 
@@ -59,6 +81,6 @@
 
 ---
 
-**Next:** [Experiments →](/start-over/)
+**Next:** [Deep Anchor →](/plan/deep-anchor)
 
-**Related:** [Roadmap →](/plan/roadmap) | [Deep Anchor →](/plan/deep-anchor)
+**Related:** [Roadmap →](/plan/roadmap) | [Start Over →](/start-over/)

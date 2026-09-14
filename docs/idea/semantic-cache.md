@@ -1,6 +1,6 @@
 # Semantic Cache
 
-> **Deep Anchor** - Research / Mastery / Systems
+> Reuse previous answers.
 
 ## Principle
 
@@ -30,9 +30,7 @@ Similarity Score
 
 ## Cache Threshold
 
-The threshold `0.92` is an initial experimental value.
-
-It should **NOT** be treated as a permanent constant.
+The threshold `0.92` is an initial experimental value. It should **NOT** be treated as a permanent constant.
 
 ## Threshold Research
 
@@ -92,8 +90,6 @@ class SemanticCache:
 ```
 
 ## Cache Invalidation
-
-Strategies for keeping cache fresh:
 
 | Strategy | Description |
 |----------|-------------|

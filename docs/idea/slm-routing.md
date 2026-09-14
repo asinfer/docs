@@ -1,6 +1,6 @@
 # SLM Routing
 
-> **Deep Anchor** - Research / Mastery / Systems
+> Classify complexity. Route to the right model.
 
 ## Concept
 

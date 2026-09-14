@@ -193,6 +193,6 @@ Deliberate Restart
 
 ---
 
-**Next:** [Area Overview →](/area/)
+**Next:** [Technology Reference →](/area/)
 
 **Related:** [Start Over →](/start-over/) | [Milestones →](/plan/milestones)

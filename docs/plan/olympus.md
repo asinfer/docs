@@ -1,12 +1,10 @@
 # Olympus
 
-> **Production / Market / Reality**
+> Production / Market / Reality
 
 ## Purpose
 
-Olympus is the production layer.
-
-This is where the project stops being an experiment.
+Olympus is the production layer. This is where the project stops being an experiment.
 
 ## Production Objective
 
@@ -30,61 +28,21 @@ Does it require a stronger model?
 Can the answer improve the system?
 ```
 
-## Production Architecture
+## Month 5-6 Targets
 
-```text
-                       CLIENT
-                         │
-                         ▼
-                 GraphQL / REST API
-                         │
-                         ▼
-                  Request Gateway
-                         │
-                         ▼
-                 Fast Embedding
-                         │
-                         ▼
-                    Vector DB
-                         │
-              ┌──────────┴──────────┐
-              │                     │
-          CACHE HIT              CACHE MISS
-              │                     │
-              ▼                     ▼
-        Cached Response           Tiny SLM
-                                      │
-                                      ▼
-                               Complexity Eval
-                                  │       │
-                                 LOW     HIGH
-                                  │       │
-                                  ▼       ▼
-                                 SLM   Frontier
-                                          │
-                                          ▼
-                                      Compress
-                                          │
-                                          ▼
-                                      Vector DB
-```
-
-## Production Requirements
-
-| Requirement | Description |
-|-------------|-------------|
-| Authentication | API key management |
-| Rate limiting | Prevent abuse |
-| Observability | Monitor performance |
-| Billing | Usage tracking |
-| API versioning | Backward compatibility |
-| SLA definitions | Uptime guarantees |
-| Security review | Vulnerability assessment |
-| Production deployment | Reliable infrastructure |
+| Target | Month | Status |
+|--------|-------|--------|
+| Authentication | 5 | ⬜ |
+| Rate limiting | 5 | ⬜ |
+| Observability | 5 | ⬜ |
+| API versioning | 5 | ⬜ |
+| Security review | 6 | ⬜ |
+| SLA definitions | 6 | ⬜ |
+| Production deployment | 6 | ⬜ |
 
 ## Definition of Done
 
-The project is NOT considered production-ready because:
+The project is NOT production-ready because:
 
 ```text
 ✓ API works

@@ -1,6 +1,6 @@
 # Frontier Escalation
 
-> **Deep Anchor** - Research / Mastery / Systems
+> Handle complex queries with expensive models.
 
 ## Concept
 
@@ -23,9 +23,7 @@ Only difficult requests should reach the frontier model.
 
 ## The Frontier Model
 
-> **An expensive exception path.**
-
-Not the default path.
+> **An expensive exception path.** Not the default path.
 
 ## When to Escalate
 

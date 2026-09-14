@@ -1,8 +1,8 @@
-# System Architecture
+# Architecture
 
-> **Deep Anchor** - Research / Mastery / Systems
+> How the system fits together.
 
-## Architecture Overview
+## Overview
 
 ```text
                        CLIENT
@@ -119,4 +119,4 @@ type Query {
 
 **Next:** [Semantic Cache →](/idea/semantic-cache)
 
-**Related:** [Problem Statement →](/scope/problem) | [API Design →](/area/graphql)
+**Related:** [Problem Statement →](/scope/problem) | [Technology Reference →](/area/)
