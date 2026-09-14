@@ -1,12 +1,8 @@
 # DevOps
 
-> **Deep Anchor** - Research / Mastery / Systems
+> **Reference** - Technology Domain
 
-## Overview
-
-DevOps automates infrastructure and deployment.
-
-## Research Topics
+## Topics
 
 | Topic | Description |
 |-------|-------------|
@@ -17,27 +13,6 @@ DevOps automates infrastructure and deployment.
 | Monitoring | Tracking system health |
 | Logging | Capturing system events |
 | Alerting | Notifying on issues |
-
-## DevOps Stack
-
-```text
-Code
-  │
-  ▼
-Build
-  │
-  ▼
-Test
-  │
-  ▼
-Deploy
-  │
-  ▼
-Monitor
-  │
-  ▼
-Iterate
-```
 
 ## Infrastructure Components
 
@@ -51,35 +26,6 @@ Iterate
 | Object storage | Store large objects |
 | Message queue | Async communication |
 
-## Deployment Pipeline
-
-```text
-Push to main
-    │
-    ▼
-Build image
-    │
-    ▼
-Run tests
-    │
-    ▼
-Push to registry
-    │
-    ▼
-Deploy to staging
-    │
-    ▼
-Run integration tests
-    │
-    ▼
-Deploy to production
-    │
-    ▼
-Monitor
-```
-
 ---
-
-**Next:** [GraphQL →](/area/graphql)
 
 **Related:** [MLOps →](/area/mlops) | [Production →](/plan/olympus)

@@ -1,12 +1,8 @@
 # GraphQL
 
-> **Deep Anchor** - Research / Mastery / Systems
+> **Reference** - Technology Domain
 
-## Overview
-
-GraphQL provides a flexible query interface for the API.
-
-## Research Topics
+## Topics
 
 | Topic | Description |
 |-------|-------------|
@@ -18,7 +14,7 @@ GraphQL provides a flexible query interface for the API.
 | Federation | Distributed schema |
 | Security | Query complexity limits |
 
-## Schema Design
+## Schema
 
 ```graphql
 type Query {
@@ -58,7 +54,7 @@ type SystemStats {
 }
 ```
 
-## Example Query
+## Example
 
 ```graphql
 query {
@@ -71,8 +67,6 @@ query {
   }
 }
 ```
-
-## Response
 
 ```json
 {
@@ -99,6 +93,4 @@ query {
 
 ---
 
-**Next:** [Idea Overview →](/idea/)
-
-**Related:** [REST API →](/area/) | [API Design →](/idea/architecture)
+**Related:** [Architecture →](/idea/architecture)

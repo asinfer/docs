@@ -1,19 +1,15 @@
 # Vector Databases
 
-> **Deep Anchor** - Research / Mastery / Systems
+> **Reference** - Technology Domain
 
-## Overview
-
-Vector databases store and query embeddings at scale.
-
-## Research Topics
+## Topics
 
 | Topic | Description |
 |-------|-------------|
 | Indexing strategies | HNSW, IVF, PQ, Flat |
 | Similarity metrics | Cosine, Euclidean, Dot Product |
 | Filtering | Pre-filter vs post-filter |
-| sharding | Distributing data across nodes |
+| Sharding | Distributing data across nodes |
 | Replication | Ensuring high availability |
 | Consistency | Balancing freshness and speed |
 | Storage compression | Reducing memory footprint |
@@ -50,7 +46,7 @@ Dot Product:
   Use when: Both direction and magnitude matter
 ```
 
-## Vector DB Selection Criteria
+## Selection Criteria
 
 | Factor | Weight |
 |--------|--------|
@@ -60,24 +56,6 @@ Dot Product:
 | Cost | Medium |
 | Ease of use | Low |
 
-## Integration Points
-
-```text
-Query
-  │
-  ▼
-Embedding Service
-  │
-  ▼
-Vector DB
-  │
-  ├──→ Cache Layer
-  │
-  └──→ Retrieval Layer
-```
-
 ---
-
-**Next:** [Agentic Systems →](/area/agentic-systems)
 
 **Related:** [Knowledge Retrieval →](/area/retrieval) | [Semantic Cache →](/idea/semantic-cache)

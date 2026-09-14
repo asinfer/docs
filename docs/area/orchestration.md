@@ -1,12 +1,8 @@
 # Orchestration
 
-> **Deep Anchor** - Research / Mastery / Systems
+> **Reference** - Technology Domain
 
-## Overview
-
-Orchestration coordinates multi-step inference pipelines.
-
-## Research Topics
+## Topics
 
 | Topic | Description |
 |-------|-------------|
@@ -18,54 +14,6 @@ Orchestration coordinates multi-step inference pipelines.
 | Circuit breaking | Failing fast when dependent services are down |
 | Load balancing | Distributing work across instances |
 
-## Pipeline Architecture
-
-```text
-User Query
-    │
-    ▼
-┌─────────────────┐
-│   Embedding     │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Vector Search  │
-└────────┬────────┘
-         │
-    ┌────┴────┐
-    │         │
-    ▼         ▼
-┌───────┐ ┌───────┐
-│ Cache │ │  SLM  │
-└───┬───┘ └───┬───┘
-    │         │
-    └────┬────┘
-         │
-         ▼
-┌─────────────────┐
-│    Response     │
-└─────────────────┘
-```
-
-## Orchestration Patterns
-
-### 1. Sequential
-
-Steps execute in order.
-
-### 2. Parallel
-
-Independent steps execute concurrently.
-
-### 3. Conditional
-
-Steps execute based on conditions.
-
-### 4. Recursive
-
-Steps can invoke themselves.
-
 ## Error Handling
 
 | Error Type | Strategy |
@@ -75,17 +23,6 @@ Steps can invoke themselves.
 | Degraded | Partial response |
 | Timeout | Cancel and fallback |
 
-## Monitoring
-
-Track pipeline execution:
-
-- Step latency
-- Success rate
-- Error rate
-- Resource utilization
-
 ---
-
-**Next:** [MLOps →](/area/mlops)
 
 **Related:** [State Machine →](/idea/state-machine) | [DevOps →](/area/devops)

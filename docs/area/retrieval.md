@@ -1,12 +1,8 @@
 # Knowledge Retrieval
 
-> **Deep Anchor** - Research / Mastery / Systems
+> **Reference** - Technology Domain
 
-## Overview
-
-The retrieval layer is the heart of the system.
-
-## Research Topics
+## Topics
 
 | Topic | Description |
 |-------|-------------|
@@ -21,27 +17,6 @@ The retrieval layer is the heart of the system.
 | Retrieval confidence | Measuring result quality |
 | Semantic cache invalidation | Managing cache freshness |
 
-## Retrieval Pipeline
-
-```text
-User Query
-    │
-    ▼
-Query Embedding
-    │
-    ▼
-Vector Search
-    │
-    ▼
-Candidate Results
-    │
-    ▼
-Reranking
-    │
-    ▼
-Final Results
-```
-
 ## Similarity Thresholds
 
 | Threshold | Behavior |
@@ -50,24 +25,6 @@ Final Results
 | 0.90 - 0.95 | Likely match |
 | 0.85 - 0.90 | Possible match |
 | < 0.85 | No match |
-
-## Retrieval Strategies
-
-### 1. Vector Search Only
-
-Simple cosine similarity search.
-
-### 2. Hybrid Search
-
-Combine vector search with keyword matching.
-
-### 3. Metadata-Filtered Search
-
-Filter results by attributes before similarity comparison.
-
-### 4. Multi-Stage Retrieval
-
-Retrieve candidates, then rerank with a more expensive model.
 
 ## Quality Metrics
 
@@ -80,6 +37,4 @@ Retrieve candidates, then rerank with a more expensive model.
 
 ---
 
-**Next:** [Vector Databases →](/area/vector-databases)
-
-**Related:** [Semantic Cache →](/idea/semantic-cache) | [Experiments →](/start-over/)
+**Related:** [Semantic Cache →](/idea/semantic-cache) | [Vector Databases →](/area/vector-databases)

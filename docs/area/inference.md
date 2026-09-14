@@ -1,12 +1,8 @@
 # Inference Optimization
 
-> **Deep Anchor** - Research / Mastery / Systems
+> **Reference** - Technology Domain
 
-## Overview
-
-Low-latency inference is the foundation of the system.
-
-## Research Topics
+## Topics
 
 | Topic | Description |
 |-------|-------------|
@@ -24,13 +20,6 @@ Low-latency inference is the foundation of the system.
 | Streaming | Progressive response delivery |
 | Token efficiency | Minimizing token usage |
 
-## Key Questions
-
-1. What is the minimum latency required for semantic routing?
-2. When is an embedding lookup cheaper than model inference?
-3. When does caching stop being useful?
-4. What percentage of requests can be answered without an expensive model?
-
 ## Latency Budget
 
 ```text
@@ -44,24 +33,6 @@ Response:      ~1ms
 Total:         ~18ms
 ```
 
-## Optimization Strategies
-
-### 1. Embedding Caching
-
-Cache frequently used embeddings to avoid recomputation.
-
-### 2. Model Warm-up
-
-Keep models loaded in memory to avoid cold starts.
-
-### 3. Request Coalescing
-
-Batch similar requests to amortize model invocation costs.
-
-### 4. Speculative Execution
-
-Pre-compute likely next steps while waiting for current results.
-
 ## Benchmark Targets
 
 | Metric | Target | Current |
@@ -72,7 +43,5 @@ Pre-compute likely next steps while waiting for current results.
 | Total p95 | < 100ms | TBD |
 
 ---
-
-**Next:** [Knowledge Retrieval →](/area/retrieval)
 
 **Related:** [Semantic Cache →](/idea/semantic-cache) | [Benchmarks →](/benchmarks/)
