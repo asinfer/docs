@@ -2,7 +2,7 @@
 
 > Track completion. Each milestone = benchmark complete.
 
-## Month 1
+## Phase 0: Present to October
 
 | Milestone | Status |
 |-----------|--------|
@@ -13,62 +13,49 @@
 | Basic embedding service | ⬜ |
 | Vector DB integration | ⬜ |
 | Basic retrieval | ⬜ |
-| Query embeddings stored | ⬜ |
-| Responses stored | ⬜ |
 | Similarity search working | ⬜ |
 | Cache threshold tuned | ⬜ |
-| Cache metrics | ⬜ |
-| **Latency benchmark (cache)** | ⬜ |
-
-## Month 2
-
-| Milestone | Status |
-|-----------|--------|
-| SLM integrated | ⬜ |
+| LangGraph state machine | ⬜ |
 | Complexity evaluator | ⬜ |
-| Routing policy | ⬜ |
-| SLM response path | ⬜ |
-| Confidence scoring | ⬜ |
+| vLLM integration | ⬜ |
+| Ollama dev workflow | ⬜ |
+| **Cache latency benchmark** | ⬜ |
 | **SLM accuracy benchmark** | ⬜ |
-| **SLM latency benchmark** | ⬜ |
-| Cache → SLM path end-to-end | ⬜ |
+| All research topics read | ⬜ |
+| Mini projects documented | ⬜ |
 
-## Month 3
-
-| Milestone | Status |
-|-----------|--------|
-| Frontier model integrated | ⬜ |
-| Escalation policy | ⬜ |
-| Response compression | ⬜ |
-| Embedding generation | ⬜ |
-| Knowledge write-back | ⬜ |
-| **End-to-end latency benchmark** | ⬜ |
-| **Cost benchmark** | ⬜ |
-| **Quality benchmark** | ⬜ |
-| **Cache hit rate measurement** | ⬜ |
-| All benchmarks published | ⬜ |
-
-## Month 4
+## Hackathon Phase: October to November
 
 | Milestone | Status |
 |-----------|--------|
-| Micro tools released | ⬜ |
-| GitHub repositories public | ⬜ |
-| Hackathon participation | ⬜ |
-| FOSS contributions | ⬜ |
-| Technical articles | ⬜ |
+| Hackathon skeleton ready | ⬜ |
+| Amazon Hackathon submitted (Oct 23) | ⬜ |
+| Nebius x NVIDIA Hackathon submitted (Oct 30) | ⬜ |
+| Lessons learned documented | ⬜ |
+| Architecture redesigned | ⬜ |
 
-## Month 5-6
+## Production Phase: December to February
 
 | Milestone | Status |
 |-----------|--------|
 | Authentication | ⬜ |
 | Rate limiting | ⬜ |
-| Observability | ⬜ |
+| Observability dashboards | ⬜ |
 | API versioning | ⬜ |
 | Security review | ⬜ |
 | SLA definitions | ⬜ |
 | Production deployment | ⬜ |
+| Open source released | ⬜ |
+| Technical articles published | ⬜ |
+| All benchmarks published | ⬜ |
+
+## Launch: March 2027
+
+| Milestone | Status |
+|-----------|--------|
+| Production API live | ⬜ |
+| VC demo ready | ⬜ |
+| Public proof complete | ⬜ |
 
 ## Success Metrics
 

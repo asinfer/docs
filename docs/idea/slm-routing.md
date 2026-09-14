@@ -2,34 +2,13 @@
 
 > Classify complexity. Route to the right model.
 
-## Concept
+## The Idea
 
-If no sufficiently similar answer exists, the system routes to a Small Language Model (SLM).
+When the cache misses, the query needs actual inference. But not all inference is equal. A simple lookup question doesn't need GPT-4. A complex multi-step analysis can't be handled by a 7B parameter model. The SLM routing layer evaluates each query and sends it to the right destination.
+
+The SLM is the first real intelligence layer in the pipeline. It's not just answering questions, it's making decisions. It classifies queries as simple, structural, or complex, and routes accordingly.
 
 ## How It Works
-
-```text
-Vector DB
-    │
-    ▼
-Tiny SLM
-```
-
-The SLM acts as the first intelligence layer.
-
-## SLM Responsibilities
-
-| Task | Description |
-|------|-------------|
-| Classify complexity | Determine if query is simple or complex |
-| Answer simple requests | Handle straightforward questions |
-| Route requests | Direct to appropriate model |
-| Summarize | Condense information |
-| Rewrite queries | Transform for better retrieval |
-| Determine retrieval strategy | Choose how to find information |
-| Identify escalation | Determine if frontier model is needed |
-
-## Complexity Evaluation
 
 ```text
                 Request
@@ -44,50 +23,26 @@ The SLM acts as the first intelligence layer.
         SLM Response    Frontier Model
 ```
 
+When a query enters the SLM routing layer, it gets scored on a scale of 1-6. The score determines where the query goes next.
+
+## What the SLM Decides
+
+Simple queries (score 1-3) get answered directly by the SLM. These are questions like "what is X?", "summarize this paragraph", or "classify this text." The SLM can handle them without help.
+
+Structural queries (score 4-5) need relationship traversal. The SLM detects that the query involves dependencies, hierarchies, or causal chains. It handles these by accessing Neo4j, traversing the knowledge graph, and composing an answer from the relationships it finds.
+
+Complex queries (score 6) escalate to the frontier model. These require deep reasoning, multi-step logic, or domain expertise that the SLM can't provide. The SLM recognizes its limits and escalates rather than returning a wrong answer.
+
 ## Evaluation Signals
 
-| Signal | Description |
-|--------|-------------|
-| Reasoning depth | How many steps required |
-| Number of operations | How many actions needed |
-| Retrieval requirements | How much context needed |
-| Ambiguity | How unclear is the query |
-| Domain complexity | How specialized is the topic |
-| Expected answer length | How long will the answer be |
-| Confidence | How sure is the SLM |
-| Tool requirements | What tools are needed |
-| Mathematical complexity | How much math is involved |
+The SLM considers multiple signals when scoring: reasoning depth (how many steps required), number of operations needed, domain complexity (is this specialized knowledge?), and its own confidence. If the SLM is unsure about any of these, it biases toward escalation. Better to pay for the frontier model than to return incorrect information.
 
-## SLM Selection
+## Why an SLM for Routing
 
-| Criteria | Weight |
-|----------|--------|
-| Latency | High |
-| Quality | Medium |
-| Cost | Medium |
-| Size | Low |
-
-## Routing Logic
-
-```python
-class SLMRouter:
-    def route(self, query: str, context: str) -> RoutingDecision:
-        complexity = self.evaluate_complexity(query, context)
-        
-        if complexity < self.threshold:
-            return RoutingDecision(
-                model="slm",
-                reason="low_complexity"
-            )
-        else:
-            return RoutingDecision(
-                model="frontier",
-                reason="high_complexity"
-            )
-```
+Using a frontier model to route queries defeats the purpose. The routing layer itself needs to be cheap. An SLM like Mistral 7B or Phi-3 can evaluate complexity in under 50 milliseconds at a fraction of the cost. The routing decision is simple enough that a small model handles it well.
 
 ---
 
 **Next:** [Frontier Escalation →](/idea/frontier-escalation)
 
-**Related:** [Inference Optimization →](/area/inference) | [State Machine →](/idea/state-machine)
+**Related:** [Inference →](/product-ecosystem/inference)

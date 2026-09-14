@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "Headless Hyper-Efficient API"
-  text: "Intelligence without unnecessary computation"
+  text: "An API engineered to make your Wallet and Life happier"
   tagline: A latency-aware, retrieval-first API architecture for semantic caching, SLM routing, and intelligent model escalation
   actions:
     - theme: brand
@@ -14,52 +14,34 @@ hero:
       link: /plan/
     - theme: alt
       text: GitHub
-      link: https://github.com/your-username/headless-hyper-efficient-api
+      link: https://github.com/asinfer
 
 features:
-  - icon: 💡
-    title: Idea
-    details: What we build, what we provide, the product statement
-  - icon: 🔧
+  - icon: 🔍
     title: Scope
+    details: The Tools used & Integrity
+    link: /scope/
+  - icon: ⚙️
+    title: Product Ecosystem
     details: Tech domains and their integration points
+    link: /product-ecosystem/
+  - icon: ⏳
+    title: Idea
+    details: Tech domains and their integration points
+    link: /idea/
   - icon: 📋
     title: Plan
     details: Weekly and monthly targets, benchmark completion path
+    link: /plan/
   - icon: 📚
-    title: Area
+    title: start-over
     details: Technology reference for each domain
+    link: /start-over/
+    
+    
 ---
 
-## How It Works
 
-```text
-                    QUERY
-                      │
-                      ▼
-               FAST EMBEDDING
-                      │
-                      ▼
-                  VECTOR DB
-                      │
-             ┌────────┴────────┐
-             │                 │
-         SIMILAR             MISS
-             │                 │
-             ▼                 ▼
-          CACHE              SLM
-                               │
-                               ▼
-                          COMPLEXITY
-                           /       \
-                         LOW       HIGH
-                          │          │
-                          ▼          ▼
-                         SLM      FRONTIER
-                                     │
-                                     ▼
-                                 KNOWLEDGE
-```
 
 ## Core Principle
 
@@ -76,7 +58,7 @@ The goal is not to build the biggest AI system. The goal is to build a system th
 1. [What are we building?](/idea/) - Product statement and core mechanisms
 2. [What's the scope?](/scope/) - Tech domains and integration points
 3. [What's the plan?](/plan/) - Weekly targets and benchmark path
-4. [Technology reference](/area/) - Deep dive into each domain
+4. [Technology reference](/product-ecosystem/) - Deep dive into each domain
 5. [When do we start over?](/start-over/) - Failure analysis and iteration
 
 </div>

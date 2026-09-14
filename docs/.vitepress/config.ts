@@ -11,12 +11,12 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.svg',
-    siteTitle: 'HHE API',
+    siteTitle: 'AI API',
 
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Scope', link: '/scope/' },
-      { text: 'Area', link: '/area/' },
+      { text: 'Product Ecosystem', link: '/product-ecosystem/' },
       { text: 'Idea', link: '/idea/' },
       { text: 'Plan', link: '/plan/' },
       { text: 'Start Over', link: '/start-over/' },
@@ -29,25 +29,18 @@ export default defineConfig({
           text: 'Scope',
           items: [
             { text: 'Overview', link: '/scope/' },
+            { text: 'Glossary', link: '/scope/glossary'},
             { text: 'Problem', link: '/scope/problem' },
             { text: 'Non-Goals', link: '/scope/non-goals' },
             { text: 'Principles', link: '/scope/principles' }
           ]
         }
       ],
-      '/area/': [
+      '/product-ecosystem/': [
         {
-          text: 'Area',
+          text: 'Product Ecosystem',
           items: [
-            { text: 'Overview', link: '/area/' },
-            { text: 'Inference Optimization', link: '/area/inference' },
-            { text: 'Knowledge Retrieval', link: '/area/retrieval' },
-            { text: 'Vector Databases', link: '/area/vector-databases' },
-            { text: 'Agentic Systems', link: '/area/agentic-systems' },
-            { text: 'Orchestration', link: '/area/orchestration' },
-            { text: 'MLOps', link: '/area/mlops' },
-            { text: 'DevOps', link: '/area/devops' },
-            { text: 'GraphQL', link: '/area/graphql' }
+            { text: 'Overview', link: '/product-ecosystem/' }
           ]
         }
       ],
@@ -82,11 +75,7 @@ export default defineConfig({
         {
           text: 'Start Over',
           items: [
-            { text: 'Overview', link: '/start-over/' },
-            { text: 'Failure Analysis', link: '/start-over/failure' },
-            { text: 'Broken Assumptions', link: '/start-over/assumptions' },
-            { text: 'Lessons Learned', link: '/start-over/lessons' },
-            { text: 'Next Iteration', link: '/start-over/next-iteration' }
+            { text: 'Overview', link: '/start-over/' }
           ]
         }
       ]

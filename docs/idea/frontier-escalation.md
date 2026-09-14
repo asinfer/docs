@@ -2,59 +2,27 @@
 
 > Handle complex queries with expensive models.
 
-## Concept
+## The Idea
 
-Only difficult requests should reach the frontier model.
+The frontier model is an expensive exception path, not the default. Only queries that no cheaper model can handle reach here. This is where the 60% cost savings come from, most queries never touch this layer.
 
-```text
-                     Request
-                        │
-                        ▼
-                    Tiny SLM
-                        │
-                        ▼
-                 Complexity Score
-                        │
-                  > threshold
-                        │
-                        ▼
-                 Frontier Model
-```
+If every query hit the frontier model, we'd be no different from a direct API call. The value of our system is in keeping queries away from this layer. The frontier is there for when nothing else works.
 
-## The Frontier Model
+## When We Escalate
 
-> **An expensive exception path.** Not the default path.
+The SLM escalates to the frontier model under specific conditions:
 
-## When to Escalate
+Complexity score exceeds the threshold. The SLM evaluated the query and determined it needs more reasoning capacity than it can provide. This might be multi-step logic, domain expertise, or nuanced analysis.
 
-| Condition | Action |
-|-----------|--------|
-| Complexity > threshold | Escalate to frontier |
-| SLM confidence < threshold | Escalate to frontier |
-| Domain requires expertise | Escalate to frontier |
-| Multi-step reasoning required | Escalate to frontier |
+Confidence is low. The SLM isn't sure about its own answer. Rather than guessing, it escalates. This is a safety mechanism, wrong answers are more expensive than expensive answers.
 
-## Escalation Policy
+Domain requires deep expertise. Some queries need specialized knowledge that a 7B parameter model simply doesn't have. Medical, legal, financial, or technical analysis often falls into this category.
 
-```python
-class EscalationPolicy:
-    def should_escalate(self, state: SystemState) -> bool:
-        # Check complexity score
-        if state.complexity_score > self.complexity_threshold:
-            return True
-        
-        # Check SLM confidence
-        if state.slm_confidence < self.confidence_threshold:
-            return True
-        
-        # Check domain expertise
-        if state.requires_expertise:
-            return True
-        
-        return False
-```
+Multi-step reasoning is needed. Queries that require chaining multiple inferences, comparing options, or building arguments step by step. The SLM can handle single-step reasoning, but complex chains need the frontier model's capacity.
 
-## Frontier Model Integration
+## After Inference
+
+The frontier response doesn't just go to the user. It gets compressed, embedded, and stored. This is the learning loop in action. Next time a similar query arrives, it hits the cache, not the frontier model.
 
 ```text
 Frontier Model
@@ -72,26 +40,16 @@ Embedding
 Vector DB
 ```
 
+The compression step extracts the essential knowledge from the response. Not the full response, but the key information that would help answer similar questions in the future. This compressed knowledge gets embedded and stored in the vector database.
+
 ## Cost Management
 
-| Strategy | Description |
-|----------|-------------|
-| Rate limiting | Limit frontier requests |
-| Cost budgets | Set spending limits |
-| Quality gates | Ensure frontier is worth it |
-| Fallback | Handle frontier failures |
+Rate limiting prevents runaway costs. If a user sends 1000 queries that all escalate to the frontier, we need to cap that. Budgets set spending limits per user or per time period. Quality gates ensure the frontier model is actually needed, we don't escalate trivially.
 
-## Quality Assurance
-
-Validate frontier responses:
-
-- Accuracy check
-- Relevance check
-- Completeness check
-- Safety check
+The goal is to keep frontier usage below 30% of total queries. If it goes higher, we're either routing poorly or the threshold needs adjustment.
 
 ---
 
 **Next:** [Learning Loop →](/idea/learning-loop)
 
-**Related:** [SLM Routing →](/idea/slm-routing) | [Cost Benchmarks →](/benchmarks/)
+**Related:** [SLM Routing →](/idea/slm-routing)

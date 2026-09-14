@@ -2,9 +2,11 @@
 
 > Track execution through explicit states.
 
-## Concept
+## The Idea
 
-The API maintains explicit execution state through a state machine.
+Every query follows a deterministic path. Same input, same path, every time. This isn't a suggestion, it's a guarantee. The state machine makes debugging possible, when something goes wrong, we know exactly where it happened and what transition failed.
+
+Without a state machine, queries flow through the system opaquely. You see the input and output, but not what happened in between. With a state machine, every transition is logged, every state is tracked, and every decision is auditable.
 
 ## State Diagram
 
@@ -51,80 +53,26 @@ RETRIEVAL
                         VECTOR DB
 ```
 
-## State Definitions
+## States
 
-| State | Description |
-|-------|-------------|
-| PENDING | Initial state, waiting to start |
-| EMBEDDING | Generating query embedding |
-| RETRIEVAL | Searching for similar queries |
-| CACHE HIT | Found similar query in cache |
-| SLM ROUTING | Evaluating query complexity |
-| COMPLEXITY EVAL | Determining complexity level |
-| SLM | Processing with small language model |
-| FRONTIER | Processing with frontier model |
-| RESPONSE | Generating final response |
-| COMPRESS / EMBED | Storing knowledge for future use |
-| VECTOR DB | Writing to vector database |
+PENDING is the initial state, waiting to start. EMBEDDING generates the query vector. RETRIEVAL searches the cache. From there, the path splits:
 
-## State Transitions
+If similarity exceeds the threshold, we hit CACHE HIT and jump to FINAL RESPONSE. Fast path, no inference.
 
-```python
-class StateMachine:
-    def __init__(self):
-        self.state = "PENDING"
-    
-    def transition(self, event: str):
-        transitions = {
-            "PENDING": "EMBEDDING",
-            "EMBEDDING": "RETRIEVAL",
-            "RETRIEVAL": {
-                "cache_hit": "CACHE HIT",
-                "cache_miss": "SLM ROUTING"
-            },
-            "SLM ROUTING": "COMPLEXITY EVAL",
-            "COMPLEXITY EVAL": {
-                "low": "SLM",
-                "high": "FRONTIER"
-            },
-            "SLM": "RESPONSE",
-            "FRONTIER": "RESPONSE",
-            "CACHE HIT": "FINAL RESPONSE",
-            "RESPONSE": "COMPRESS / EMBED",
-            "COMPRESS / EMBED": "VECTOR DB",
-            "VECTOR DB": "FINAL RESPONSE"
-        }
-        
-        if isinstance(transitions.get(self.state), dict):
-            self.state = transitions[self.state][event]
-        else:
-            self.state = transitions[self.state]
-```
+If the cache misses, we enter SLM ROUTING. The SLM evaluates the query and moves to COMPLEXITY EVAL. Low complexity routes to SLM. High complexity routes to FRONTIER.
 
-## State Tracking
+Both paths converge at RESPONSE, then COMPRESS/EMBED stores the result for future use, and VECTOR DB persists it.
 
-Each state transition is recorded:
+## Why Determinism Matters
 
-```python
-class StateTransition:
-    from_state: str
-    to_state: str
-    event: str
-    timestamp: float
-    duration_ms: float
-```
+Non-deterministic routing is a nightmare to debug. If the same query sometimes routes to the SLM and sometimes to the frontier, you can't predict costs, you can't reproduce bugs, and you can't trust your benchmarks. Deterministic routing means same input always produces the same path. The only variable is the threshold, which we control.
 
 ## Observability
 
-Track state machine behavior:
-
-- State distribution
-- Transition frequency
-- Time per state
-- Error rates per state
+Each state transition is logged with timestamps. We track time per state, transition frequency, and error rates. This is how we know if the cache is slow, the SLM is underperforming, or the frontier escalation rate is too high.
 
 ---
 
 **Next:** [SLM Routing →](/idea/slm-routing)
 
-**Related:** [Agentic Systems →](/area/agentic-systems) | [Architecture →](/idea/architecture)
+**Related:** [Architecture →](/idea/architecture)

@@ -2,87 +2,11 @@
 
 > Every expensive answer makes future answers cheaper.
 
-## Concept
+## The Idea
 
-> **Every expensive answer should make future answers cheaper.**
+The system improves over time. Every query that hits the frontier model gets compressed and stored. Next time a similar query arrives, it hits the cache. The more queries we process, the fewer queries need expensive inference.
 
-The system improves over time by learning from expensive computations.
-
-## How It Works
-
-```text
-                 ┌─────────────────┐
-                 │   User Query    │
-                 └────────┬────────┘
-                          │
-                          ▼
-                    Fast Retrieval
-                          │
-             ┌────────────┴────────────┐
-             │                         │
-          HIT │                       MISS
-             │                         │
-             ▼                         ▼
-       Cached Answer                  SLM
-                                       │
-                                       ▼
-                                  Complexity
-                                       │
-                              ┌────────┴────────┐
-                              │                 │
-                             LOW              HIGH
-                              │                 │
-                              ▼                 │
-                             SLM           Frontier
-                                                │
-                                                ▼
-                                          Compression
-                                                │
-                                                ▼
-                                           Vector DB
-                                                │
-                                                └──────►
-```
-
-## Knowledge Compression
-
-A successful frontier response should improve the system:
-
-```text
-Frontier Model
-      │
-      ▼
-Final Response
-      │
-      ▼
-Compression
-      │
-      ▼
-Embedding
-      │
-      ▼
-Vector DB
-```
-
-## Compression Process
-
-| Step | Action |
-|------|--------|
-| 1 | Receive frontier response |
-| 2 | Extract key information |
-| 3 | Compress to essential knowledge |
-| 4 | Generate embedding |
-| 5 | Store in vector DB |
-| 6 | Update cache |
-
-## Learning Metrics
-
-| Metric | Description |
-|--------|-------------|
-| Knowledge growth | New entries added |
-| Cache hit rate improvement | Better cache performance |
-| Frontier invocation rate | Fewer expensive calls |
-| Quality maintenance | Response quality over time |
+This is the flywheel. Without it, every day starts from zero. With it, the system gets smarter with every query. The cache grows, the SLM handles more, and frontier usage drops.
 
 ## The Virtuous Cycle
 
@@ -102,10 +26,31 @@ Lower cost
 More queries
 ```
 
-## Long-Term Architecture
+The cycle is self-reinforcing. More queries mean more cache entries. More cache entries mean higher hit rates. Higher hit rates mean fewer frontier calls. Fewer frontier calls mean lower costs. Lower costs mean we can handle more queries. The loop closes.
 
-The desired behavior is:
-> **Every expensive answer should make future answers cheaper.**
+## Knowledge Compression
+
+When the frontier model answers, we don't just return the response and forget it. We extract the essential knowledge, embed it, and store it. The response becomes reusable intelligence.
+
+```text
+Frontier Model
+      │
+      ▼
+Final Response
+      │
+      ▼
+Compression
+      │
+      ▼
+Embedding
+      │
+      ▼
+Vector DB
+```
+
+The compression step is critical. Raw responses are often verbose, contain formatting, or include context that isn't useful for future queries. We extract the core information, the answer itself, and store that. This keeps the cache lean and relevant.
+
+## The Long-Term View
 
 ```text
 Query → Cache → SLM → Frontier → Compress → Vector DB → Query
@@ -113,8 +58,14 @@ Query → Cache → SLM → Frontier → Compress → Vector DB → Query
                     └──────────────────────────────┘
 ```
 
+The loop closes. Expensive answers feed the cache. The cache feeds future answers. Cost drops over time. The system becomes more efficient with every query it processes.
+
+## Why This Matters
+
+Without the learning loop, cost is constant. Every query pays the same price regardless of how many times we've answered it before. With the learning loop, cost decreases over time. The system pays for itself.
+
 ---
 
 **Next:** [Plan Overview →](/plan/)
 
-**Related:** [Semantic Cache →](/idea/semantic-cache) | [Knowledge Retrieval →](/area/retrieval)
+**Related:** [Semantic Cache →](/idea/semantic-cache)
