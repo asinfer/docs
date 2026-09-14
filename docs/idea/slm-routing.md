@@ -45,4 +45,4 @@ Using a frontier model to route queries defeats the purpose. The routing layer i
 
 **Next:** [Frontier Escalation →](/idea/frontier-escalation)
 
-**Related:** [Inference →](/product-ecosystem/inference)
+**Related:** [Technical Glossary →](/scope/glossary)

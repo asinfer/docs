@@ -51,4 +51,4 @@ This prevents cache pollution. A single random query doesn't squat in the cache 
 
 **Next:** [State Machine →](/idea/state-machine)
 
-**Related:** [Vector Storage →](/product-ecosystem/vector-databases) | [Glossary: Cosine Similarity →](/scope/glossary)
+**Related:** [Technical Glossary →](/scope/glossary)

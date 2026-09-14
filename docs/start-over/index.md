@@ -59,6 +59,6 @@ Phase 0 is complete when:
 
 ---
 
-**Next:** [Failure Analysis →](/start-over/failure)
+**Next:** [Plan Overview →](/plan/)
 
 **Related:** [Roadmap →](/plan/roadmap) | [Engineering Principles →](/scope/principles)
