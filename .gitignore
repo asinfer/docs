@@ -1,0 +1,20 @@
+# Design and planning files
+Design.md
+AGENTS.md
+
+# Node dependencies
+node_modules/
+
+# VitePress build output
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
